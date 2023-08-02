@@ -4,21 +4,21 @@ import './Footer.scss';
 function Footer() {
     return (
         <>
-            <footer class="footer">
+            <footer className="footer">
                 <h4>About Us</h4>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat maiores maxime dignissimos delectus
                     tempora<br />atque vero excepturi, nihil numquam molestiae doloribus quae eius nobis laboriosam,<br />
                     exercitationem consectetur praesentium ab! Ratione? </p>
-                <div class="icons">
-                    <i class="bi bi-facebook"></i>
-                    <i class="bi bi-twitter"></i>
-                    <i class="bi bi-instagram"></i>
-                    <i class="bi bi-linkedin"></i>
-                    <i class="bi bi-youtube"></i>
+                <div className="icons">
+                    <i className="bi bi-facebook"></i>
+                    <i className="bi bi-twitter"></i>
+                    <i className="bi bi-instagram"></i>
+                    <i className="bi bi-linkedin"></i>
+                    <i className="bi bi-youtube"></i>
                 </div>
                 <p></p>
 
-                <p class="last">
+                <p className="last">
                     <a href="/about">Viamond Studios © 2023</a>
                     <a href="/">Privacy & Legal</a>
                 </p>
