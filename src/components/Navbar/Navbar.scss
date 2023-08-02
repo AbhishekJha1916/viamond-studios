@@ -1,0 +1,40 @@
+.navbar{
+	background-color: whitesmoke;
+	.navbar-brand{
+		font-size: 25px;
+		font-family: Lexand Deca;
+		color: #3d609b;
+	}
+	.navbar-nav{
+		font-size: 18px;
+		font-family: Abel;
+		li{
+			padding-right: 20px;
+			&::after {
+				content: '';
+				width: 0%;
+				height: 2px;
+				background: #f04b4c;
+				display: block;
+				margin: auto;
+				transition: 0.5s;
+			}
+			&:hover {
+				color: #3d609b;
+				&:after {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.btn{
+		text-align: center;
+		border: 1px solid #3d609b;
+		border-radius: 0%;
+		color: #3d609b;
+		&:hover {
+			color: white;
+			background-color: #3d609b;
+		}
+	}
+}
