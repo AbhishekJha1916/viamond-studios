@@ -1,7 +1,12 @@
 import React from 'react';
+import {useNavigate} from 'react-router-dom';
 import './Navbar.scss';
 
 function Navbar() {
+    let navigate = useNavigate();
+    const signIn = () => {
+        navigate.push('/sign-in');
+    }
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -16,19 +21,19 @@ function Navbar() {
                                 <a className="nav-link active" aria-current="page" href="/">Home</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/">About Us</a>
+                                <a className="nav-link" href="/about">About Us</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/">Services</a>
+                                <a className="nav-link" href="/services">Services</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/">Products</a>
+                                <a className="nav-link" href="/products">Products</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/">Contact Us</a>
+                                <a className="nav-link" href="/contact">Contact Us</a>
                             </li>
                         </ul>
-                        <button className="btn btn-outline-success" type="submit">Sign In</button>
+                        <button className="btn btn-outline-success" type="submit" onClick={signIn}>Sign In</button>
                     </div>
                 </div>
             </nav>
