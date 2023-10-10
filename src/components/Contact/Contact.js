@@ -33,7 +33,7 @@ const Contact = () => {
                         <div>
                             <i class="bi bi-envelope"></i>
                             <span>
-                                <h5>services.zulio@gmail.com</h5>
+                                <h5>services.viamond@gmail.com</h5>
                                 <p>Email us your query</p>
                             </span>
                         </div>

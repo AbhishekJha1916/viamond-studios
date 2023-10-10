@@ -5,7 +5,7 @@ import './Navbar.scss';
 function Navbar() {
     let navigate = useNavigate();
     const signIn = () => {
-        navigate.push('/sign-in');
+        navigate('/sign-in');
     }
     return (
         <>
