@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SignUp.scss';
 
 const SignUp = () => {
+
+  const [user, setUser] = useState(
+    {
+      first_name:'',
+      last_name:'',
+      email:'',
+      password:'',
+    }
+  );
+
+  let name, value;
+  const handleInputs = (e) => {
+    console.log(e);
+    name = e.target.name;
+    value = e.target.value;
+
+    setUser({...user, [name]:value});
+  }
+
   return (
     <>
         <>
@@ -12,16 +31,16 @@ const SignUp = () => {
             </div>
             <div className="inputs">
               <div className="input">
-                <input type="text" name="f-name" id="f-name" placeholder='First Name'/>
+                <input type="text" name="first_name" id="f-name" placeholder='First Name' value={user.first_name} onChange={handleInputs}/>
               </div>
               <div className="input">
-                <input type="text" name="l-name" id="l-name" placeholder='Last Name'/>
+                <input type="text" name="last_name" id="l-name" placeholder='Last Name' value={user.last_name} onChange={handleInputs}/>
               </div>
               <div className="input">
-                <input type="email" name="email" id="email" placeholder='Email Address'/>
+                <input type="email" name="email" id="email" placeholder='Email Address' value={user.email} onChange={handleInputs}/>
               </div>
               <div className="input">
-                <input type="password" name="password" id="password" placeholder='Password'/>
+                <input type="password" name="password" id="password" placeholder='Password' value={user.password} onChange={handleInputs}/>
                 <p>Passwords must be between 8 and 20 characters in length and contain 1 <br />
                    upper case letter, 1 lower case letter, and 1 number.</p>
               </div>
@@ -33,7 +52,7 @@ const SignUp = () => {
                  our Privacy Statement. You can unsubscribe at any time.</p>
             </div>
             <div className="terms-cod">
-              <input type="radio" name="terms-cod" id="terms-cod"/> <span>Yes, I would like Viamond Studios to send me email communications.</span>
+              <input type="radio" name="terms-cod" id="terms-cod" required/> <span>Yes, I would like Viamond Studios to send me email communications.</span>
               <p>By clicking <span>“Create Account”</span>, you agree to our <a href="/">Terms & Conditions.</a></p>
             </div>
             <div className="signUp-button btn">
