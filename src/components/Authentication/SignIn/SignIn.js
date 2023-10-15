@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SignIn.scss';
 
 const SignIn = () => {
+
+  const [user, setUser] = useState(
+    {
+      email:'',
+      password:'',
+    }
+  );
+
+  let name, value;
+  const handleInputs = (e) => {
+    console.log(e);
+    name = e.target.name;
+    value = e.target.value;
+
+    setUser({...user, [name]:value});
+  }
+
   return (
     <>
         <div className="container">
@@ -11,10 +28,10 @@ const SignIn = () => {
             </div>
             <div className="inputs">
               <div className="input">
-                <input type="email" name="email" id="email" placeholder='Email Address'/>
+                <input type="email" name="email" id="email" placeholder='Email Address' value={user.email} onChange={handleInputs}/>
               </div>
               <div className="input">
-                <input type="password" name="password" id="password" placeholder='Password'/>
+                <input type="password" name="password" id="password" placeholder='Password' value={user.password} onChange={handleInputs}/>
               </div>
             </div>
             <div className="changePassword">
