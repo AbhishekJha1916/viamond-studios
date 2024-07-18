@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.scss';
+import './Home.css';
 
 import HLogo from '../Images/HomeLogo.png';
 import product1 from '../Images/post-1.jpg';

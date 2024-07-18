@@ -1,5 +1,5 @@
 import React from 'react'
-import './Services.scss'
+import './Services.css'
 
 import abstractWeb from '../Images/abstract-web.jpg';
 import abstractCat from '../Images/abstract-cat.jpg';

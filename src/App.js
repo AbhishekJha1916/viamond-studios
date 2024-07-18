@@ -12,7 +12,7 @@ import Services from './components/Services/Services';
 import Contact from './components/Contact/Contact';
 import SignIn from './components/Authentication/SignIn/SignIn';
 import SignUp from './components/Authentication/SignUp/SignUp';
-import './App.scss';
+import './App.css';
 
 
 function App() {

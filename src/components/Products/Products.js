@@ -1,5 +1,5 @@
 import React from 'react';
-import './Products.scss';
+import './Products.css';
 
 import post1 from '../Images/post-1.jpg';
 import post2 from '../Images/post-2.jpg';
